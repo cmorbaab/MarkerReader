@@ -4,14 +4,6 @@ from ddlite import *
 
 import pickle
 
-#TODO:
-
-#-Remove Author's names
-
-#-Using both Dictionary Match and Syntax Match will overcount
-
-#Parse AGR2 document into seperate Sentences
-
 def parseDocIntoWords():
 
     filename = "AGR2_blood_biomarker.txt"
@@ -44,13 +36,7 @@ def parseDocIntoWords():
 
 def biomarkerGenerator(words):
 
-    #markerDatabase = ['AGR2', 'PSA', 'CGA']
-
     markerDatabase = []
-
-    diseaseDatabase = ["crpc", "prostate cancer", "prostate cancer cells", "ne-crpc", "metastatic",
-
-                       "metastatic prostate cancer", "crpc-ne"]
 
     with open('markerData.pickle', 'rb') as f:
 
